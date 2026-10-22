@@ -5,9 +5,10 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/wissalelmania/my-app.git'
+                git branch: 'main',
+                    url: 'https://github.com/wissalelmania/my-app.git'
             }
-        }
+    }
 
         stage('Build Docker Image') {
             steps {
